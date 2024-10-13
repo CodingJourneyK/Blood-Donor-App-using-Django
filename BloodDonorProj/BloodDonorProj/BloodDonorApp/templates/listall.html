@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+<html>
+	<head>
+		table{text-align:center;}
+	<body>
+		{% block centercontent %}
+			<h2 align="center"><i> Donor List </i></h2><hr>			
+			{% for d in donors %}
+			<table align="center">
+			<tr>
+				<th> Name </th>
+				<td> {{d.name}} </td>
+			</tr>
+			<tr>
+				<th> Age </th>
+				<td> {{d.age}} </td>
+			</tr>
+			<tr>
+				<th> Gender </th>
+				<td> {{d.gender}} </td>
+			</tr>
+			<tr>
+				<th> Blood group </th>
+				<td> {{d.blood}} </td>
+			</tr>
+			<tr>
+				<th> phone number </th>
+				<td> {{d.phone}} </td>
+			</tr>
+			<tr>
+				<th> Address </th>
+				<td> {{d.address}} </td>
+			</tr>
+			<hr>
+			</table>
+			{% endfor %}
+			
+			<p>Back to <a href="/BloodDonorApp/">Home</a></p>
+		{% endblock %}
+	</body>
+</html>

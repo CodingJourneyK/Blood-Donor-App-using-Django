@@ -1,0 +1,26 @@
+<!--index.html blood Donor-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> index page - base template </title>
+		<style>
+			h1{text-align:center; 
+				background-color:green;
+				color: white;
+				padding: 30px;
+			}
+			ul{list-style-type:none;}
+		</style>
+	</head>
+	<body bgcolor="lightgreen">
+		<h1> welcome to Blood Donor Appliction </h1><br><br>
+		<hr color="green">
+		<ul align="center">
+			<li><a href="/BloodDonorApp/dispall/">View Donors</a><br><br>
+			<li><a href="/BloodDonorApp/adddonor/">Add Donors</a><br><br>
+			<li><a href="/BloodDonorApp/search/">Find Donor using phone number</a>
+		</ul>
+		{%block centercontent%}
+		{%endblock%}
+	</body>
+</html>

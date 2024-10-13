@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+<html>
+	<body>
+		{% block centercontent %}
+		<h2 align="center"><i> Add Donor </i></h2>
+		<form method="POST" align="center">{% csrf_token %}
+			{{form.as_div}}
+		<!--	<label>Enter name
+			<input type="text" name="name"><br><br>
+			<label>Enter Age
+			<input type="number" name="num"><br><br>
+			<label>Enter Gender
+			<input type="radio" name="gender" value="F"> Female
+			<input type="radio" name="gender" value="M"> Male <br><Br>
+			<label>Enter Blood group
+			<select name="bloodgrp" id="bld">
+				<option value="O+ve"> O+ve </option>
+				<option value="A+ve"> A+ve </option>
+				<option value="B+ve"> B+ve </option>
+				<option value="AB+ve"> AB+ve </option>
+				<option value="O-ve"> O-ve </option>
+				<option value="A-ve"> A-ve </option>
+				<option value="B-ve"> B-ve </option>
+				<option value="AB-ve"> AB-ve </option><br><br>
+			<label>Enter address
+			<input type="text" name="addr"><br><br>
+			<label> Enter contact no </label>
+			<input type="tel" name="phone" value=""><br><br>
+		-->
+			<br>
+			<button type="submit" align="center"> SAVE </button>
+		</form>
+		<p> Back to <a href="/BloodDonorApp/">Home</a></p>
+		{% endblock %}
+	</body>
+</html>

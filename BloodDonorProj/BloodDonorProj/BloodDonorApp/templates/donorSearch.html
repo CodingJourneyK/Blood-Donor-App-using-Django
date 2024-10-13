@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+<html>
+	<body>
+		{% block centercontent %}
+		<h2 align="center"><i> Search Donor </i></h2>
+		<hr>
+		<form method="POST" align="center">{% csrf_token %}
+			<label> Enter phone number: 
+			<input type="tel" name="phone"><br><br>
+			<input type="submit" value="search">
+		</form>
+		
+		{% if results %}
+			{% if donors %}
+				{% for d in donors %}
+					<p> Name: {{d.name}}</p>
+					<p> Age: {{d.age}}</p>
+					<p> Gender: {{d.gender}}</p>
+					<p> Blood group: {{d.blood}}</p>
+					<p> Address: {{d.address}}</p>
+					<hr>
+				{% endfor %}			
+			{% else %}
+				<h2> No records in given phone number </h2>
+			{% endif %}
+		{% endif %}
+		<br><br>
+		<p>Back to <a href="/BloodDonorApp/">Home</a></p>
+		{% endblock %}
+	</body>
+</html>
+
+					
